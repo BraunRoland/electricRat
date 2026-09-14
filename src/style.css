@@ -84,7 +84,7 @@ body,#app{
     margin: 10px;
 }
 
-#gen {
+#gen, #export, #download {
     background-color: rgb(46, 45, 45);
     color: white;
     border: none;
@@ -94,3 +94,18 @@ body,#app{
     padding: 5px;
 }
 
+#gen, #export, #download:hover {
+    cursor: pointer;
+}
+
+#exportDiv {
+    text-align: center;
+}
+
+#export, #download {
+    padding: 10px;
+}
+
+#csv {
+    width: 100%;
+}

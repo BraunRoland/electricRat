@@ -68,6 +68,33 @@ async function generalas(){
     }
 }
 
+function csvKiiras() {
+    const csv = document.getElementById('csv')! as HTMLTextAreaElement;
+    csv.value ='nev;tamadas;elet'
+    csv.rows = rats.length+1;
+    for(var r of rats) {
+        csv.value += `\n${r.toCSV()}`
+    };
+}
+
+function download() {
+    const ratCSV: string[] = [];
+    ratCSV.push('nev;tamadas;elet');
+    for(var r of rats) {
+        ratCSV.push('\n'+r.toCSV());
+    }
+    const blob = new Blob(ratCSV, {type: 'text/csv'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'rats.csv';
+    a.click();
+}
+
+document.getElementById('download')!.addEventListener('click',download)
+
+document.getElementById('export')!.addEventListener('click',csvKiiras)
+
 document.addEventListener("DOMContentLoaded",()=> {
     document.getElementById("form")!.addEventListener("submit",async (e)=> {
         e.preventDefault();

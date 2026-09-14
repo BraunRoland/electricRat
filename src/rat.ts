@@ -17,4 +17,8 @@ export class Rat {
         this.atk = atk;
         this.hp = hp;
     }   
+
+    toCSV() {
+        return `${this.name};${this.atk};${this.hp}`
+    }
 }
