@@ -20,4 +20,8 @@ describe("Rat osztály", () => {
     test("sok hp", () => {
         expect(() => {new Rat("Rózsi",50,120)}).to.throw();
     });
+    const r: Rat = new Rat('Ödön',12,65);
+    test('toCSV()', () => {
+        expect(r.toCSV()).toBe('Ödön;12;65');
+    })
 });
