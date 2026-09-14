@@ -7,23 +7,25 @@
   </head>
   <body>
     <div id="app">
-      <form action="">
+      <form id="form">
         <label for="nev">Név:</label> <br>
         <input type="text" name="nev" id="nev"> <br>
-        <button type="submit">Generalas</button>
+        <button type="submit" id="gen">Generálás</button>
       </form>
+      <div id="err" class="hidden">
+        <h2>Hiba</h2>
+        <p>valami nem jó</p>
+      </div>
       <div id="kiiras">
-        <div class="kartya">
-          <h2>Nev</h2>
-          <p>hp: 10</p>
-          <p>atk</p>
-        </div>
-        <div class="kartya">
-          <h2>Nev</h2>
-          <p>hp: 10</p>
-          <p>atk</p>
+        <!-- <div class="kartya">
+          <div class="belso"> ez kell
+            <h2>Nev</h2>
+            <p>hp: 10</p>
+            <p>atk</p>
+          </div> -->
         </div>
       </div>
+      <button id="test">asd</button>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
